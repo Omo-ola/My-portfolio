@@ -105,11 +105,11 @@ section {
 .home .row .image .icons{
   display: flex;
   justify-content: flex-end;
-  gap: 1rem;
+  gap: 1.3rem;
   padding: 2.3rem;
 }
 .home .row .image .icons a{
-  font-size: 2.3rem;
+  font-size: 2.5rem;
 }
 .home .row .image img {
   width: 100%;
