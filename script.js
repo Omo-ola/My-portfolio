@@ -1,12 +1,3 @@
-// const menu = document.querySelector(".menu-btn");
-// const nav = document.querySelector(".header .flex .navbar");
-
-// menu.addEventListener("click", () => {
-//     menu.classList.toggle("fa-times");
-//     nav.classList.toggle("active")
-// })
-
-
 // swiper from swiper js
 var swiper = new Swiper(".course-slider", {
   spaceBetween: 20,
@@ -32,3 +23,23 @@ var swiper = new Swiper(".course-slider", {
 
 
 // swiper from swiper js
+
+//scroll up section functionality 
+const allSections = document.querySelectorAll(".section")
+const showSection = function (entries, observer) {
+  const [entry] = entries;
+  console.log(entry);
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove("section-hidden");
+  observer.unobserve(entry.target);
+}
+
+const sectObserver = new IntersectionObserver(showSection, {
+  root: null,
+  threshold: 0.2,
+});
+
+allSections.forEach(function (section) {
+  sectObserver.observe(section);
+  // section.classList.add("section-hidden");
+})

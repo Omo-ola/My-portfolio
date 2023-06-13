@@ -79,7 +79,10 @@ section {
   color: var(--red);
   text-transform: uppercase;
 }
-
+.section-hidden{
+  opacity: 0;
+  transform: translateY(10rem);
+}
 
 /* section  hero page-------------------------------------- */
 /* section  hero page-------------------------------------- */
@@ -88,6 +91,7 @@ section {
   margin-top: 6rem;
   padding: 6rem 0;
   padding-left: 2rem;
+  /* height: calc(100vh - 5rem); */
 }
 .row {
   display: flex;
@@ -161,7 +165,7 @@ section {
 }
 .spacing{
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(35rem,1fr));
+  grid-template-columns: repeat(auto-fit,minmax(40rem,1fr));
   gap: 2rem;
 }
 .swiper-pagination-bullet {
@@ -276,6 +280,10 @@ font-size: 2rem;
 .home .row .image {
   flex: 1 1 40rem;
 }
+.section-hidden{
+  opacity: 1;
+  transform: translateY(0);
+ }
 }
 
 /* 760px query---------------------------------------------- */
@@ -296,6 +304,7 @@ section {
 .form-container .btn{
 margin-right: 0rem;
 }
+ 
 }
 
 /* 480px quer-------------------------------------------*/
@@ -314,7 +323,7 @@ margin-right: 0rem;
 /* Animation css============================================================ */
 .size {
   position: relative;
-  /* height: 45rem; */
+  height: 45rem;
   perspective: 1500px;
 }
 .pos {
@@ -420,3 +429,5 @@ margin-right: 0rem;
   border-bottom-right-radius: 5px;
 }
 }
+
+
